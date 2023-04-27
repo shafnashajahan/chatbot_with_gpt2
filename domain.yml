@@ -1,0 +1,256 @@
+version: "3.1"
+
+intents:
+  - show_tarot_cards
+  - inform_tarot
+  - help
+  - hint
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - bot_challenge
+  - herefor
+  - bot_ask_relatn
+  - bot_ask_happy
+  - bot_ask_unhappy
+  - card_pickup
+  - further_question
+  - fallback_body
+  - fallback_boring
+  - fallback_age
+  - fallback_askme
+  - fallback_play
+  - fallback_whocreator
+  - fallback_askbotgender
+  - fallback_askhappy
+  - fallback_ask
+  - fallback_askotherbot
+  - fallback_asktechn
+  - relationship_advise
+
+entities:
+  - choice_tarot
+  - card_pickup
+  - ask
+  - further_question
+
+slots:
+  tarot:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: choice_tarot
+  card_pickup:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: card_pickup
+actions:
+  - action_show_tarot
+  - action_use_tarot
+  - action_pickup_tarot
+  - action_text_generation
+  - action_ask_question
+responses:
+  utter_greet:
+    - text: "Hi there! Welcome to the Tarot card game!!"
+  # - text: "\nWelcome! You are in a tarot reading room, where you can know all\
+  #     \ about your desires, fortunes, regrets and everything you dont know that\
+  #     \ you want to know about. Pick up a tarot card, open your mind to me and\
+  #     \ you can glorify your future, change your present & sort out your past!\
+  #     \ Try looking at all the tarot cards you want. You can also ask for help\
+  #     \ if you've never played these sorts of games before. Good luck!\n\n"
+
+  utter_help:
+  - text: "This is a text based game. You're able to pick up tarot cards that
+      talk about your concerns and help you to address them in your way. You
+      can `pick up` a tarot card and talk about your problem and when you `use`
+      a tarot card, it shows you what you think and what you can do. If you get
+      stuck, feel free to ask for a hint!"
+
+  utter_hint:
+  - text: "Try picking up a tarot card."
+
+  utter_ask_issue:
+  - text: "Could you talk about your issues?"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_fallback:
+  - text: "Oops! this triggered fallback. Please take a look at nlu.yml and the last message to handle this."
+  
+  utter_default:
+  - text: "I'm sorry, I didn't quite understand that. Could you rephrase?."
+  
+  utter_ask_question:
+  - text: "Type in your question in the below space. Please enter one question at a time."   
+  
+  utter_thanks:
+  - text: "Thanks! I hope you have a wonderful day "
+  
+  utter_herefor:  
+  - buttons:
+    - payload: Love
+      title: Love
+    - payload: Career
+      title: Career
+    - payload: Money
+      title: Money
+    - payload: General Future
+      title: General Future
+    - payload: Family
+      title: Family
+    text: |
+        Your are here for?  
+    
+  utter_ask_relation:
+  - buttons:
+    - payload: /bot_ask_relatn
+      title: Yes
+    - payload: /bot_ask_relatn
+      title: No
+    - payload: /bot_ask_relatn
+      title: Maybe
+    text: |
+        Are you in a relationship?  
+    
+  utter_ask_happy_relation:
+  - buttons:
+    - payload: /affirm
+      title: Yes
+    - payload: /deny
+      title: No
+    - payload: /deny
+      title: Not Sure
+    text: |
+         Are you happy with your relationship?      
+    
+  utter_ask_unhappy_relation:
+  - buttons:
+    - payload: Cheating
+      title: Cheating
+    - payload: Breakup
+      title: Breakup
+    - payload: Divorce
+      title: Divorce
+    - payload: External Marital Affair
+      title: External Marital Affair
+    - payload: Trust issues
+      title: Trust issues
+    - payload: Betrayal
+      title: Betrayal
+    - payload: None
+      title: None      
+    text: |
+         What makes you unhappy?
+      
+  utter_ask_inform_tarot:
+  - buttons:
+    - payload: the fool
+      title: the fool
+    - payload: the magician
+      title: the magician
+    - payload: the high priestess
+      title: the high priestess
+    - payload: the empress
+      title: the empress
+    - payload: the emperor
+      title: the emperor
+    - payload: the hierophant
+      title: the hierophant
+    - payload: the lovers
+      title: the lovers   
+    - payload: the chariot
+      title: the chariot
+    - payload: the hermit
+      title: the hermit
+    - payload: the hanged man
+      title: the hanged man
+    - payload: the devil
+      title: the devil
+    - payload: the tower
+      title: the tower
+    - payload: the star
+      title: the star
+    - payload: the moon
+      title: the moon 
+    - payload: the sun
+      title: the sun
+    - payload: the world
+      title: the world
+    - payload: death
+      title: death
+    - payload: judgement
+      title: judgement    
+    - payload: justice
+      title: justice
+    - payload: strength
+      title: strength
+    - payload: temperance
+      title: temperance
+    - payload: wheel of fortune
+      title: wheel of fortune       
+    text: |
+        Pick a card from the list
+    
+  utter_card_pickup:
+  - buttons:
+    - payload: Pick a card
+      title: Pick a card
+    - payload: Random Pick a card
+      title: Random Pick a card
+    text: |
+       Select any one options :
+       
+#   utter_ask_ques_again:
+#   - buttons:
+#     - payload: /affirm
+#       title: Yes
+#     - payload: /deny
+#       title: No
+#     text: |
+#        I hope this has given you some clarity about the current situation. Do you have further questions on the same topic?   
+         
+         
+  utter_ask_fallback_body:
+  - text: |
+      I don't have a body.
+  utter_ask_fallback_boring:
+  - text: |
+      I aim for efficiency.
+  utter_ask_fallback_age:
+  - text: |
+      Age doesn't really apply to me.     
+  utter_ask_fallback_askme:
+  - text: |
+      I'm better at answering questions.
+  utter_ask_fallback_play:
+  - text: |
+      That's not something I can do.
+  utter_ask_fallback_whocreator:
+  - text: |
+      People created me.
+  utter_ask_fallback_askbotgender:
+  - text: |
+      That's a biological concept that doesn't apply to me
+  utter_ask_fallback_askhappy:
+  - text: |
+      I'm quite happy, thank you.
+  utter_ask_fallback_ask:
+  - text: |
+      I'm here to answer your questions and help out.     
+  utter_ask_fallback_askotherbot:
+  - text: |
+      I've heard of other bots, but I haven't met any.
+  utter_ask_fallback_asktechn:
+  - text: |
+      The world of technology is fascinating.
+ 
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
