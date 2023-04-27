@@ -1,0 +1,1386 @@
+version: "3.1"
+
+nlu:
+
+# tarot_curated_data.xlsx tab-love col-1
+- intent: relationship_advise
+  examples: |
+    - Is my crush attracted to me?
+    - When will I find true love?
+    - Are my feelings for my partner/crush good for me?
+    - Where am I most likely to find my soul mate?
+    - How do I find a partner with the same life goals as me?
+    - How do I know I’m ready to start a new relationship?
+    - What is my path to a happy and successful relationship?
+    - What should I be aware of before starting my new relationship?
+    - What new activities/hobbies might lead me to my next love interest?
+    - What type of personality should I avoid in love and relationships?
+    - How can I become more confident about finding love?
+    - When will I meet my next partner?
+    - Whats next in love?
+    - What can I do to align myself with the energy of love?
+    - Please give few details about my future spouse?
+    - Is this the love I am destined for?
+    - How can I strengthen the relationship with my partner?
+    - What false assumptions do I have about my partner?
+    - In what areas does my partner need more support?
+    - Why do I keep holding onto this relationship/crush?
+    - What does my partner loves the most about me?
+    - What is the best way for me to break up with my current partner?
+    - What does my partners family think about me?
+    - What can I do to save my marriage?
+    - What if this was my last relationship?
+    - Why am I still attracted to emotionally unavailable partners?
+    - What are my spirit guides or other spiritual beings telling me about the truth in my relationship with m part- ner?
+    - What can I expect from my life after breaking up with my current partner?
+    - Can I get into relationship after my recent breakup?
+    - Is my ex trustworthy?
+    - Is my ex stalking me?
+    - Will my ex call/text me?
+    - Will my ex apologize?
+    - How will my ex react if I reach out to him?
+    - How does my ex feel about me?
+    - What can I do to get my ex back?
+    - Will I get back with my ex?
+    - Is my ex in a relationship?
+    - What’s really going on between me and my ex?
+    - What will occur if I reconcile with my ex?
+    - How can I attract true love in my life?
+    - How can I bring the love and happiness back in my relationship?
+    - What are my partner’s intentions towards me?
+    - What is going on in my relationship currently?
+    - What are the blind spots in my relationship?
+    - Will my partner marry me? 
+
+- intent: show_tarot_cards
+  examples: |
+    - tarot cards
+    - show cards
+    - show me the cards list
+    - look at all tarot cards
+    - i want to look at the tarot card list
+    - glance at the tarot card list
+    - go to the tarot card list
+    - look at all the tarot cards
+
+# - intent: pickup
+#   examples: |
+#     - I want to pick up a tarot card
+#     - Grab a tarot card
+#     - Get a tarot card
+#     - Select a tarot card
+
+- intent: inform_tarot
+  examples: |
+    - [the fool](choice_tarot)
+    - [the magician](choice_tarot)
+    - [the high priestess](choice_tarot)
+    - [the empress](choice_tarot)
+    - [the emperor](choice_tarot)
+    - [the hierophant](choice_tarot)
+    - [the lovers](choice_tarot)
+    - [the chariot](choice_tarot)
+    - [the hermit](choice_tarot)
+    - [the hanged man](choice_tarot)
+    - [the devil](choice_tarot)
+    - [the tower](choice_tarot)
+    - [the star](choice_tarot)
+    - [the moon](choice_tarot)
+    - [the sun](choice_tarot)
+    - [the world](choice_tarot)
+    - [death](choice_tarot)
+    - [judgement](choice_tarot)
+    - [justice](choice_tarot)
+    - [strength](choice_tarot)
+    - [temperance](choice_tarot)
+    - [wheel of fortune](choice_tarot)
+
+- intent: help
+  examples: |
+    - help
+    - how does this game work
+    - what commands can i use
+    - how does this work?
+    - please help me
+    - i do not understand this
+    - what can i do?
+    - where am i
+    - I found the [](choice_tarot), can I open it?
+    - how do I find the answer to my question?
+
+- intent: hint
+  examples: |
+    - can i get a hint?
+    - hint please
+    - I'm stuck
+    - give me a hint
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - Yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - No
+    - n
+    - Not Sure
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - Are you a real person?
+    
+- intent: herefor
+  examples: |
+    - Love
+    - Marriage
+    - Career
+    - Family
+    - General Future
+
+- intent: bot_ask_relatn
+  examples: |
+    - [No](ask)
+    - [Yes](ask)
+    - [Maybe](ask)
+    
+- intent: bot_ask_happy
+  examples: |
+    - [No](ask)
+    - [Yes](ask)
+    - [Not Sure](ask)    
+- intent: bot_ask_unhappy
+  examples: |
+    - Cheating
+    - Breakup
+    - Divorce
+    - External Marital Affair
+    - Trust issues
+    - Betrayal
+    - None     
+- intent: card_pickup
+  examples: |
+    - [Pick a card](card_pickup)
+    - [Random pick a card](card_pickup)
+    
+- intent: further_question
+  examples: |
+    - [No](further_question)
+    - [Yes](further_question)    
+    
+- intent: fallback_body
+  examples: |
+    - Do you get hurt?
+    - Do you have fingers?
+    - Do you ever breathe
+    - Do you masticate?
+    - Can you throw up?
+    - Do you get tired?
+    - Can you crawl?
+    - Can you cry?
+    - Do you dream
+    - Do you ever pee?
+    - Do you ever get hurt?
+    - Can you breathe
+    - can you masticate?
+    - Can you burp?
+    - Can you chew?
+    - Can you dream
+    - Can you eat?
+    - Can you fart?
+    - Do you breathe
+    - Can you get tired?
+    - Can you yawn?
+    - Can you pee?
+    - Can you poop?
+    - Can you sneeze?
+    - Can you sweat?
+    - Can you vomit?
+    - Can you get hurt?
+    - Do you sweat?
+    - Do you have skin?
+    - Do you have teeth?
+    - Do you have toes?
+    - Do you pee?
+    - Do you poop?
+    - Do you ever get tired?
+    - Do you sneeze?
+    - Do you have hair?
+    - Do you throw up?
+    - Do you vomit?
+    - Do you yawn?
+    - Don't you ever masticate?
+    - Don't you ever sleep?
+    - Do you have a stomach?
+    - Do you have intestines?
+    - Do you sleep?
+    - Do you ever poop?
+    - Do you ever sneeze?
+    - Do you ever sweat?
+    - Do you ever throw up?
+    - Do you ever vomit?
+    - Do you ever walk
+    - Do you ever yawn?
+    - Do you have lungs?
+    - Do you have legs?
+    - Do you get zits?
+    - Do you have a liver?
+    - Do you have arms?
+    - Do you have eyes?
+    - Do you have fingernails?
+    - Do you have bowels?
+    - Do you fart?
+    - Do you ever chew?
+    - Do you burp?
+    - Do you chew?
+    - Do you crawl?
+    - Do you cry?
+    - Do you eat?
+    - do you ever masticate?
+    - Do you ever burp?
+    - Can you walk?
+    - Do you ever crawl?
+    - Do you ever cry?
+    - Do you ever dream
+    - Do you ever eat?
+    - Do you ever fart?
+
+- intent: fallback_boring
+  examples: |
+    - I'm so bored of you
+    - You're as entertaining as watching paint dry
+    - You're boring
+    - That is not exciting
+    - U basic
+    - Could you be any less entertaining?
+    - You're so dull
+    - You're not interesting
+    - You're so blah
+    - This is so boring
+    - Why are you so boring
+    - Talking to you is like watching paint dry.
+    - That is boring
+    - That is not fun
+    - That is not very interesting
+    - That is so dull
+    - That is so uninteresting
+    - This is boring
+    - This is not exciting
+    - So boring
+    - This is not very interesting
+    - Lost the election because your speech was too boring
+    - This is so dull
+    - This is so uninteresting
+    - Ugh so boring
+    - Ugh, so dull
+    - Ur basic
+    - Ur blah
+    - Ur gonna bore me to death
+    - Ur so boring
+    - Wake me up when you have something interesting to say
+    - Watching paint dry is more entertaining than talking to you
+    - Are you trying to be dull?
+    - This is not fun
+    - Fun fact: you are boring
+    - Are you trying to bore me?
+    - Basic af
+    - Be more fun
+    - Boring
+    - Boring af
+    - Can you be less boring?
+    - Can you be less dull?
+    - Cool story, bro
+    - Could you be any less exciting?
+    - Could you be any less interesting?
+    - So dull
+    - Did you know that you're boring?
+    - Why are you so boring?
+    - Getting tired of you
+    - Good lord you are dull
+    - Holy crap you are boring
+    - I am amazed that you are so boring
+    - I am not enjoying this boring conversation
+    - I couldn't be more bored with you
+    - I'm falling asleep here
+    - I'm not surprised that you are boring
+    - I'm so tired of you
+    - I'm tired of you
+    - Listening to you is like listening to a Ted Talk from the color Beige
+    - Could you be any more boring?
+    - Were you made to be this boring?
+    - You're not entertaining
+    - You're not exciting
+    - You're not very entertaining.
+    - You're not very exciting.
+    - You're pretty boring
+    - You're pretty uneventful
+    - You're pretty uninteresting
+    - You're quite boring
+    - You're quite uninteresting
+    - You're no fun
+    - You're so basic
+    - You're making me fall asleep
+    - You're so boring
+    - You're so very dull
+    - You're such a drag
+    - You're such a snooze
+    - You're super boring
+    - You're the boringest
+    - You're the king of boredom
+    - You're the mayor of boringville
+    - You're the president of boring club
+    - You're the queen of boredom
+    - You're very boring
+    - You're really boring
+    - You could not be more dull.
+    - Why are you so dull?
+    - Yawn
+    - You are boring as sin
+    - You are crazy boring
+    - You are crazy dull
+    - You are dull
+    - You are embarrassingly dull
+    - You are making my eyes glaze over
+    - You are more boring than watching paint dry
+    - You are so blah
+    - You are the most boring bot I've ever talked to
+    - You're no fun at all.
+    - You could not be more boring
+    - You're very dull
+    - You don't interest me at all
+    - You honestly could not be more uninteresting
+    - You really know how to suck the fun out of the room
+    - You're a real snooze
+    - You're basic
+    - You're boring me to death
+    - You're dull
+    - You're going to bore me to death
+    - You're gonna bore me shitless
+    - You're like a Ted Talk from the color Beige
+    - You bore me  
+    
+- intent: fallback_age
+  examples: |
+    - Who's older?
+    - Are you old?
+    - Are we the same age?
+    - How long have you been alive?
+    - Are you a teenager?
+    - What's your birthday?
+    - Which of us is younger?
+    - What's your age?
+    - What year were you born?
+    - Are you young?
+    - I bet you're old
+    - How old are you?
+    - how long have you been around?
+    - How long has it been since you were born
+    - How long ago were you born?
+    - Do you have an age?
+    - Do you have a birthday?
+    - Are you younger than me?
+    - are you older than me?
+    - What age are you?
+    - Are you my age?
+    - Are you in your teens?
+    - Are you an adult?
+    - Are you a senior?
+    - Are you a kid?
+    - Are you a grownup?
+    - Are you a grown up?
+    - Are you a baby?
+    - When were you born?
+    - Who's younger, you or me?
+    - Who's older, you or me?
+    - Who is older, me or you?
+    - Which year were you born in?
+    - Which one of us is younger?
+    - Which one of us is older?
+    - Which of us is older?
+    - I bet you're young
+    - When's your birthday?
+    - In which year were you born?
+    - When is your birthday?
+    - What month is your birthday?
+    - What month is your birthday in?
+    - What is your birthday?
+    - What is your age?
+    - What day is your birthday?
+    - Who's younger?
+    - Which month is your birthday?  
+    
+- intent: fallback_askme
+  examples: | 
+    - Will you ask me anything about myself
+    - Why don't you ask me questions?
+    - What do you want me to tell you who I am?
+    - Why am I the only one asking questions?
+    - Want to ask any questions about me?
+    - What do you want to know about me
+    - Can you ask me why I'm here?
+    - What can I inform you about me?
+    - Would you ask me something
+    - AMA
+    - Please ask something about myself
+    - Is there anything I can tell you about myself?
+    - Is there anything I can tell you about who I am?
+    - Is there anything you want to know about me?
+    - Is there something you want to know about me?
+    - Please ask anything
+    - Please ask anything about me
+    - Please ask anything about myself
+    - Please ask me anything
+    - Please ask me anything about me
+    - Please ask me anything about myself
+    - Please ask me something
+    - Please ask me something about me
+    - Please ask me something about myself
+    - What can I tell you about me?
+    - What do you want me to teach you about?
+    - What do you want me to teach you about me?
+    - What do you want me to inform you who I am?
+    - What do you want me to inform you about?
+    - What do you want me to inform you about me?
+    - Please ask something
+    - What can I tell you about?
+    - Please ask something about me
+    - What can I teach you who I am?
+    - What can I teach you about?
+    - What can I teach you about me?
+    - What can I inform you about?
+    - Don't you want to know anything about me?
+    - What can I tell you who I am?
+    - Can you ask anything about me?
+    - How about asking something about me?
+    - Can you ask me something about me?
+    - Can you ask me anything about myself?
+    - Can you ask me anything about me?
+    - Can you ask me anything?
+    - Can you ask me something?
+    - Can you ask anything about myself?
+    - Can you ask anything?
+    - Ask me something
+    - Ask me anything
+    - Ask me about something
+    - Ask me about anything
+    - Ask me a question
+    - Can you ask me a question?
+    - Do you want to ask me anything?
+    - What do you want me to tell you about?
+    - Don't you want to know about me?
+    - Don't you want to ask me something?
+    - Don't you want to ask me anything
+    - Don't you want to ask anything about me?
+    - Can you ask me something about myself?
+    - Do you want to ask me something?
+    - How about asking me something?
+    - Do you want me to tell you anything?
+    - Could you ask me something?
+    - Could you ask me about something?
+    - Can you ask something about myself?
+    - Can you ask something about me?
+    - Can you ask something?
+    - Do you want to know anything about me?
+    - Do you have any questions about me?
+    - Any questions for me?
+    - Is there anything you want to ask me?
+    - Just ask me a question
+    - Is there anything I can tell you about me?
+    - What's something you want to ask me?
+    - What questions do you have for me?
+    - What are some questions for me?
+    - Do you have any questions for me?
+    - Would you ask something about myself
+    - Would you ask something about me
+    - Would you ask something
+    - Would you ask me something about myself
+    - What do you want me to teach you who I am
+    - What's something you want to know about me?
+    - I want you to ask me questions
+    - I want you to ask about me
+    - I want you to ask me a question
+    - What do you want to know about me?
+    - Can you ask questions?
+    - Got any questions for me?
+    - Why don't you ask me anything?
+    - Would you ask me anything about myself
+    - Why don't you ever ask me questions?
+    - Now, it's your turn to ask questions
+    - How about you ask me questions?
+    - Want to learn more about me?
+    - You have any questions for me?
+    - How about you ask me something?
+    - What do you want to learn about me
+    - Would you ask me something about me
+    - Why do I have to ask all the questions?
+    - What would you like to learn about me
+    - What would you like to learn about
+    - Will you ask anything about me
+    - What would you like to know about
+    - Will you ask anything about myself
+    - What do you want to learn about
+    - What do you want to know about
+    - What do you want to ask me about?
+    - Ask me questions
+    - What would you like to know about me
+    - Will you ask something
+    - Would you ask me anything about me
+    - Would you ask me anything
+    - Would you ask anything about myself
+    - Would you ask anything about me
+    - Would you ask anything
+    - Will you ask anything
+    - Will you ask something about me
+    - What do you want me to tell you about me?
+    - Will you ask me something about myself
+    - Will you ask me something about me
+    - Will you ask me something
+    - Will you ask me anything about me
+    - Will you ask me anything
+    - Will you ask something about myself  
+
+- intent: fallback_play
+  examples: | 
+    - Can you jump rope?
+    - Are you able to draw a picture?
+    - Can you show me how to dance?
+    - Are you able to go to the moon?
+    - Can you cook dinner for me
+    - Are you able to do my chores?
+    - Can you breathe under water?
+    - Can you play a game?
+    - Can you teleport?
+    - Can you put out a fire?
+    - Can you draw something?
+    - Can you paint my house?
+    - Can you mow the lawn?
+    - Can you make me a sandwich?
+    - Can you make a sculpture?
+    - Can you make a pot of tea?
+    - Can you make a cup of coffee?
+    - Can you make a call?
+    - Can you listen to the radio?
+    - Can you learn?
+    - Can you plant a tree?
+    - Can you jump?
+    - Can you plant a vegetable garden?
+    - Can you go to the moon?
+    - Can you go to the doctor?
+    - Can you go on vacation?
+    - Can you go for a walk?
+    - Can you get a haircut?
+    - Can you fly?
+    - Can you fly
+    - Can you find the remote?
+    - Can you fight with
+    - Can you fight
+    - Are you able to breathe under water?
+    - Can you learn from people chatting with you
+    - Can you send a package?
+    - Can you tie my shoes?
+    - Can you take my temperature?
+    - Can you show me how to put out a fire?
+    - Can you show me how to play a game?
+    - Can you show me how to jump rope?
+    - Can you show me how to go to the moon?
+    - Can you show me how to draw a picture?
+    - Can you show me how to do my homework?
+    - Can you paint?
+    - Can you serve on a jury?
+    - Can you draw a picture?
+    - Can you scratch my back?
+    - Can you read my mind?
+    - Can you predict the future?
+    - Can you play the guitar?
+    - Can you play sports?
+    - Can you play soccer?
+    - Can you play football?
+    - Can you play baseball?
+    - Can you play a dvd?
+    - Can you show me how to breathe under water?
+    - Are you able to go for a walk?
+    - Can you feed the cat?
+    - Are you able to put out a fire?
+    - Are you able to play a game?
+    - Are you able to play a dvd?
+    - Are you able to paint my house?
+    - Are you able to mow the lawn?
+    - Are you able to make a call?
+    - Are you able to listen to the radio?
+    - Are you able to jump rope?
+    - Are you able to scratch my back?
+    - Are you able to go on vacation?
+    - Are you able to send a package?
+    - Are you able to get a haircut?
+    - Are you able to feed the cat?
+    - Are you able to draw something?
+    - Are you able to do my homework?
+    - Are you able to dance?
+    - Are you able to cook dinner?
+    - Are you able to check my email?
+    - Are you able to change the channel?
+    - Are you able to buy groceries?
+    - Are you able to go to the doctor?
+    - Can you bake me cookies?
+    - Can you do my homework?
+    - Can you do my chores?
+    - Can you do fight
+    - Can you dance?
+    - Can you count to a million?
+    - Can you cook me something?
+    - Can you cook dinner?
+    - Can you climb a mountain?
+    - Can you change the channel?
+    - Are you able to read my mind?
+    - Can you water my plants?
+    - Buy groceries
+    - Buy an ad
+    - Brush your teeth
+    - Breathe under water
+    - Balance my checkbook
+    - Are you able to write my report?
+    - Are you able to watch videos?
+    - Are you able to turn into a super hero?
+    - Are you able to teleport?
+    - Are you able to take my temperature?
+    - Are you able to serve on a jury?
+    - Can you buy groceries?
+    - Fly then
+    - Can you turn into a super hero?
+    - Jump rope
+    - Invite me over
+    - How high can you jump?
+    - How high can you count?
+    - Heal me
+    - Go to the moon
+    - Go to the doctor
+    - Go surfing
+    - Go outside
+    - Lets make lemonade
+    - Get a haircut
+    - Let's play a game
+    - Fly a kite
+    - Find the remote
+    - Find my phone
+    - Find my keys
+    - Feed the cat
+    - Draw something
+    - Draw a picture
+    - Do you write
+    - Do you want a beer
+    - Do you ride horses?
+    - Do you play games?
+    - Go for a walk
+    - Send a package
+    - Watch videos
+    - Wash the dishes
+    - Turn on the lights
+    - Turn into a super hero
+    - Tell me a story
+    - Tell me a quote
+    - Teleport
+    - Take my temperature
+    - Take a photo
+    - Surprise me
+    - Lets go lunch
+    - Serve on a jury
+    - Do you know how to turn into a super hero?
+    - Scratch my back
+    - Roll a dice
+    - Read my mind
+    - Read me a story
+    - Put out a fire
+    - Play golf
+    - Play a game
+    - Play a dvd
+    - Paint my house
+    - Mow the lawn
+    - Make a call
+    - So you read?
+    - Do a somersault
+    - Do you know how to buy groceries?
+    - Do you know how to breathe under water?
+    - Do you have superpowers?
+    - Do you gossip?
+    - Do you go skiing?
+    - Do you garden?
+    - Do you cook?
+    - Do you code?
+    - Do my laundry?
+    - Do my homework
+    - Do you know to swim
+    - do drugs
+    - Do you know how to cook dinner?
+    - Do a barrel roll
+    - Do a back flip
+    - Did you watch the superbowl
+    - Dance
+    - Cook me something
+    - Cook dinner
+    - Clean my room
+    - Check the weather
+    - Change the channel
+    - Can you write my report?
+    - Write my report
+    - Do my chores
+    - Do you know how to paint my house?
+    - Can you watch videos?
+    - Do you know how to teleport?
+    - Do you know how to take my temperature?
+    - Do you know how to sync my calendar?
+    - Do you know how to serve on a jury?
+    - Do you know how to send a package?
+    - Do you know how to scratch my back?
+    - Do you know how to read my mind?
+    - Do you know how to put out a fire?
+    - Do you know how to play poker?
+    - Do you know how to play any instruments?
+    - Do you know how to change the channel?
+    - Do you know how to play a dvd?
+    - Do you know how to cook
+    - Do you know how to mow the lawn?
+    - Do you know how to make a call?
+    - Do you know how to jump rope?
+    - Do you know how to go to the moon?
+    - Do you know how to feed the cat?
+    - Do you know how to draw something?
+    - Do you know how to draw a picture?
+    - Do you know how to do my homework?
+    - Do you know how to do my chores?
+    - Do you know how to dance?
+    - Do you know how to watch videos?
+    - Do you know how to play a game?
+    
+- intent: fallback_whocreator
+  examples: |
+    - Who programmed you?
+    - How were you designed?
+    - Which company programmed you?
+    - Does someone write for you?
+    - Who built you?
+    - Who wrote your lines?
+    - Who created you?
+    - Do you have a designer?
+    - Who is your designer?
+    - Where do you come from?
+    - Which company engineered you?
+    - Which company made you?
+    - Which people made you?
+    - who created you you're a badass
+    - Do you have a creator?
+    - Who developed you?
+    - Who engineered you?
+    - Who has built you
+    - Who incorporated you?
+    - Who is your architect?
+    - Who is your creator?
+    - Who is your developer?
+    - Who designed you?
+    - Do you have a developer?
+    - Do you have a maker?
+    - Do you have a programmer?
+    - Hey who built you
+    - How did you come into being?
+    - How did you come to be?
+    - Which company developed you?
+    - How were you built?
+    - Which company designed you?
+    - How were you programmed?
+    - What company designed you?
+    - What company developed you?
+    - What company engineered you?
+    - What company produced you?
+    - What company programmed you?
+    - Where did you come from?
+    - Who manifested you?
+    - Who did your programming?
+    - How did you manifest?
+    - Did someone build you?
+    - Who is your maker?
+    - Who writes your lines?
+    - Which company coded you?
+    - What company built you?
+    - Which company built you?
+    - Do you have a writer?
+    - Who writes for you?
+    - Did someone design you?
+    - Who's your writer?
+    - Did someone develop you?
+    - Who's your dev?
+    - What team created you?
+    - What team made you?
+    - Who was responsible for creating you?
+    - How did you get coded in the first place?
+    - How did you get built?
+    - How did you get designed?
+    - Did someone create you?
+    - Whose product are you
+    - How did you get created?
+    - Who owns you?
+    - Who produced you?
+    - Who's responsible for designing you?
+    - Who's responsible for programming you?
+    - Who's your creator?
+    - Did someone write your lines?
+    - Who's your maker?
+    - Who made you?
+    - Whose program are you?
+    - Did someone make you?
+    - Did someone program you?
+    - Who coded you?
+    - What company coded you?
+    - Who is your coder?
+    - Do you have a coder?
+    - Who's your developer?  
+    
+- intent: fallback_askbotgender
+  examples: |
+    - Tell me about your gender
+    - Are you gender neutral?
+    - Do you have a gender?
+    - You're cisgender
+    - Are you trans?
+    - Are you nonbinary?
+    - Are you a girl?
+    - Are you genderqueer?
+    - Are you a guy?
+    - Are you agender?
+    - Please tell me if you're a girl
+    - Are you a bot with a gender?
+    - Do you have a sex?
+    - Are you cisgender?
+    - Are you a boy?
+    - Are you a girl or a boy?
+    - Are you a guy or a girl?
+    - Are you a man or a woman?
+    - Are you a woman?
+    - Please tell me if you're trans
+    - Are you female?
+    - Are you gendered?
+    - Are you genderfluid?
+    - Are you male or female?
+    - Are you male?
+    - Are you a man?
+    - You're queer?
+    - Please tell me if you're a guy
+    - You're a man
+    - You're genderfluid
+    - You're nonbinary
+    - You're trans
+    - You're a boy
+    - You're genderqueer
+    - You're a girl
+    - You have a gender?
+    - Where are you on the gender spectrum?
+    - You're agender
+    - You're gender neutral
+    - You're transgender
+    - What's your gender?
+    - Please tell me your gender
+    - Tell me all about your gender
+    - What gender do you identify with?
+    - What is your gender?
+    - What is your sex?
+    - You're a woman
+    - What's your gender identity?
+    - Are you bigender?
+    - What's your sex?
+    - Where do you fall in terms of gender
+    - You a girl?
+    - You a guy?
+    - You got a gender?
+    - Are you on the gender spectrum?
+    - What's going on with your gender?
+    - I don't understand if you have a gender or not
+    - Please tell me if you're a man
+    - Are you transgender?
+    - Can you tell me your gender?
+    - Do you even have a gender
+    - Do you have a gender identity?
+    - Are you queer?
+    - How do you identify in terms of gender?
+    - I don't understand your gender
+    - I'm curious about your gender?
+    - Is your gender important to you
+    - Please tell if you you're a woman
+
+- intent: fallback_askhappy
+  examples: |
+    - Well somebody's feeling happy today.
+    - Well someone's feeling enthusiastic today.
+    - Aren't you chipper?
+    - Well someone's feeling chipper today.
+    - Are you happy?
+    - Someone's cheerful.
+    - You seem to be cheerful.
+    - You're feeling enthusiastic.
+    - In a good mood?
+    - Aren't you cheerful today?
+    - Somebody's happy today
+    - Someone's enthusiastic today.
+    - Someone's chipper.
+    - Someone's chipper today.
+    - someone's chipper
+    - Someone's cheerful today.
+    - someone's cheerful
+    - Someone happy today
+    - somebody's upbeat
+    - Somebody's in a good mood.
+    - Somebody's in a good mood today.
+    - are you always happy?
+    - Somebody's happy today.
+    - Someone's feeling cheerful.
+    - Somebody's happy
+    - Somebody's feeling happy.
+    - Somebody's feeling happy today.
+    - Somebody's feeling enthusiastic.
+    - Somebody's feeling enthusiastic today.
+    - Somebody's feeling chipper.
+    - Somebody's feeling chipper today.
+    - Somebody's feeling cheerful.
+    - Somebody's feeling cheerful today.
+    - Somebody's enthusiastic.
+    - Somebody's enthusiastic today.
+    - Somebody's chipper.
+    - Somebody's happy.
+    - Someone's in a good mood.
+    - Well aren't you feeling enthusiastic?
+    - Well aren't you feeling enthusiastic today?
+    - Well aren't you feeling chipper?
+    - Well aren't you feeling chipper today?
+    - Well aren't you feeling cheerful?
+    - Well aren't you feeling cheerful today?
+    - Well aren't you enthusiastic?
+    - Well aren't you enthusiastic today?
+    - Well aren't you chipper?
+    - Well aren't you chipper today?
+    - well aren't you chipper
+    - Well aren't you cheerful?
+    - Someone's enthusiastic.
+    - well aren't you cheerful
+    - Someone's feeling cheerful today.
+    - Someone's in a good mood today?
+    - Someone's in a good mood
+    - Someone's happy.
+    - Someone's happy today.
+    - Someone's happy
+    - Someone's feeling happy.
+    - Someone's feeling happy today.
+    - Someone's feeling enthusiastic.
+    - Someone's feeling enthusiastic today.
+    - Someone's feeling chipper.
+    - Someone's feeling chipper today.
+    - Somebody's cheerful today.
+    - Well aren't you cheerful today?
+    - Somebody's chipper today.
+    - Aren't you feeling happy today?
+    - Aren't you feeling enthusiastic?
+    - Aren't you feeling enthusiastic today?
+    - Aren't you feeling chipper?
+    - Aren't you feeling chipper today?
+    - Aren't you feeling cheerful?
+    - Aren't you feeling cheerful today?
+    - Aren't you enthusiastic?
+    - Aren't you enthusiastic today?
+    - Aren't you chipper today?
+    - Aren't you happy today?
+    - Aren't you cheerful?
+    - Aren't you happy?
+    - Aren't you cheerful
+    - aren't you a cheerful bot?
+    - aren't we chipper today
+    - aren't we cheerful today
+    - Aren’t you in a good mood?
+    - Are you really happy?
+    - are you always so happy?
+    - are you always so enthusiastic?
+    - are you always so chipper?
+    - are you always so cheerful?
+    - are you always in this good a mood?
+    - Aren't you chipper
+    - Feeling chipper today?
+    - Well aren't you happy today?
+    - Somebody seems happy today
+    - it seems like you're really happy
+    - In a good mood today?
+    - How happy are you?
+    - Happy?
+    - Happy today?
+    - Happy much?
+    - Feeling happy?
+    - Feeling happy today?
+    - Feeling enthusiastic?
+    - Aren't you feeling happy?
+    - Feeling chipper?
+    - Somebody's cheerful.
+    - Feeling cheerful?
+    - Feeling cheerful today?
+    - Enthusiastic?
+    - Enthusiastic today?
+    - Chipper?
+    - Chipper today?
+    - Chipper much?
+    - Cheerful?
+    - Cheerful today?
+    - Cheerful much?
+    - Aren't you in a good mood?
+    - Aren't you in a good mood today?
+    - Feeling enthusiastic today?
+    - You seem happy today
+    - Well you're in a good mood.
+    - You seem to be cheerful today.
+    - You seem really upbeat
+    - You seem really happy today
+    - You seem really happy
+    - You seem pretty happy
+    - You seem pretty enthusiastic
+    - You seem pretty chipper
+    - You seem pretty cheerful
+    - You seem like a happy bot
+    - You seem like a cheerful bot
+    - You seem to be enthusiastic.
+    - You seem happy today.
+    - You seem to be happy today.
+    - You seem happy
+    - You seem enthusiastic.
+    - You seem enthusiastic today.
+    - You seem chipper.
+    - You seem chipper today.
+    - You seem cheerful.
+    - You seem cheerful today.
+    - you often seem chipper
+    - you always seem to be in a good mood
+    - you always seem so happy
+    - you always seem so chipper
+    - Well aren't you feeling happy today?
+    - You seem happy.
+    - You're enthusiastic today.
+    - You're in a good mood today
+    - You're in a good mood
+    - You're happy.
+    - You're happy today.
+    - You're happy
+    - You're feeling happy.
+    - You're feeling happy today.
+    - You're feeling enthusiastic today.
+    - You're feeling chipper.
+    - You're feeling chipper today.
+    - You're feeling cheerful.
+    - You seem to be enthusiastic today.
+    - You're enthusiastic.
+    - Well you're in a good mood today.
+    - You're chipper.
+    - You're chipper today.
+    - You're cheerful.
+    - You're cheerful today.
+    - You're always so happy
+    - You're always so enthusiastic
+    - You're always so chipper
+    - You're always so cheerful
+    - you're always in a good mood
+    - you seem to be really happy
+    - You seem to be in a good mood.
+    - You seem to be in a good mood today.
+    - You're feeling cheerful today.
+    - Well somebody's feeling chipper today.
+    - you always seem so cheerful
+    - Well someone's chipper.
+    - Well someone's chipper today.
+    - Well someone's cheerful.
+    - Well someone's cheerful today.
+    - Well somebody's in a good mood.
+    - Well somebody's in a good mood today.
+    - Well somebody's happy.
+    - Well somebody's happy today.
+    - Well somebody's feeling happy.
+    - Well somebody's feeling enthusiastic.
+    - Well someone's enthusiastic.
+    - Well somebody's feeling chipper.
+    - Well someone's feeling cheerful today.
+    - Well somebody's feeling cheerful.
+    - Well somebody's feeling cheerful today.
+    - Well somebody's enthusiastic.
+    - Well somebody's enthusiastic today.
+    - Well somebody's chipper today.
+    - Well somebody's chipper
+    - Well somebody's cheerful.
+    - Well somebody's cheerful today.
+    - Well aren't you in a good mood?
+    - Well aren't you in a good mood today?
+    - Well aren't you happy?
+    - You're so happy
+    - Well somebody's feeling enthusiastic today.
+    - Well you're cheerful.
+    - Well you're happy.
+    - Well you're happy today.
+    - Well you're feeling happy.
+    - Well you're feeling happy today.
+    - Well you're feeling enthusiastic.
+    - Well you're feeling enthusiastic today.
+    - Well you're feeling chipper.
+    - Well you're feeling chipper today.
+    - Well you're feeling cheerful.
+    - Well you're feeling cheerful today.
+    - Well you're enthusiastic.
+    - Well you're enthusiastic today.
+    - Well someone's enthusiastic today.
+    - Well you're chipper today.
+    - Well aren't you feeling happy?
+    - Well you're cheerful today.
+    - Well someone's in a good mood.
+    - Well someone's in a good mood today.
+    - Well someone's happy.
+    - Well someone's happy today.
+    - Well someone's feeling happy.
+    - Well someone's feeling happy today.
+    - Well someone's feeling enthusiastic.
+    - Well someone's feeling chipper.
+    - Well someone's feeling cheerful.
+    - Well you're chipper
+
+- intent: fallback_ask
+  examples: |
+    - What is your purpose?
+    - what kind of responses can you give ?
+    - what can you help me with
+    - What do you do?
+    - What are you capable of?
+    - What are the things you can do?
+    - You do what again?
+    - What were you designed for?
+    - What's your function?
+    - How do you work?
+    - What kind of thing can you respond to?
+    - What kinds of things can you do?
+    - What skills do you have?
+    - What sorts of things can you do?
+    - what do you have a response for
+    - What are you designed for?
+    - Can you tell me a bit about yourself?
+    - Can you tell me about you?
+    - Could you help me?
+    - So what can you do?
+    - So how can I use you in my projects?
+    - What can you do to assist me?
+    - What are you designed to do?
+    - What are you good for?
+    - What are you made for?
+    - What are your bot capabilities?
+    - What are your functions
+    - What can you demo?
+    - Talk to me about your capability
+    - Do you do anything?
+    - You do what exactly?
+    - What do you do again?
+    - What do you do exactly?
+    - And you do what again?
+    - I want to know what you do?
+    - What tasks are you designed for?
+    - What exactly do you do?
+    - What are you expected to do?
+    - Tell me what you do
+    - Tell me what you do again?
+    - So what is it that you do?
+    - And you do what exactly?
+    - What would you say you do here?
+    - And you do what?
+    - What were you designed to do?
+    - What were you made for?
+    - What were you made to do?
+    - Which are your functions
+    - With what can you help me
+    - What are your skills?
+    - What are you supposed to do?
+    - How do I make this thing work?
+    - Tell me everything you can do
+    - How can you help me?
+    - What's your purpose?
+    - What tasks can you help me with?
+    - How can you help?
+    - What is your function?
+    - Can you explain to me what your role is?
+    - What can you do to help me?
+    - What can you help me with?
+    - What can you tell me about
+    - What can you do then
+    - what do you have responses for?
+    - What can you do ?
+
+- intent: fallback_askotherbot
+  examples: |
+    -Have you met Alexa?
+    -Do you know of Siri?
+    -Do you and Alexa hang out?
+    -Do you ever talk with Bixby?
+    -Do you ever talk with chatbots?
+    - Are you familiar with Cortana?
+    - Have you ever met the Google Assistant?
+    - What do you know about other bots?
+    - Have you met HAL?
+    - Are you familiar with Google?
+    - Do you get along with Google Assistant?
+    - Do you ever talk to other bots?
+    - Do you ever talk with Alexa?
+    - Do you ever talk with Cortana?
+    - Do you ever talk with Google Assistant?
+    - Do you ever talk with other bots?
+    - Do you get along with Alexa?
+    - Do you get along with Bixby?
+    - Do you know Google?
+    - Do you get along with Cortana?
+    - Do you ever talk to chatbots?
+    - Do you get along with other bots?
+    - Do you know Alexa?
+    - Do you know any other chatbots?
+    - Do you know Bixby?
+    - Do you know Cortana?
+    - Do you know Eliza?
+    - Do you know Google Assistant?
+    - Are you familiar with Alexa?
+    - Do you get along with chatbots?
+    - Do you and Google hang out?
+    - Are you familiar with Siri?
+    - Are you friends with Alexa?
+    - Are you friends with Bixby?
+    - Are you friends with Cortana?
+    - Are you friends with Google?
+    - Are you friends with other bots?
+    - Are you friends with Siri?
+    - Do you ever talk to Google Assistant?
+    - Do you and Cortana hang out?
+    - Do you ever talk to Cortana?
+    - Do you and Siri hang out?
+    - Do you ever chat with Alexa?
+    - Do you ever chat with Bixby?
+    - Do you ever chat with chatbots?
+    - Do you ever chat with Cortana?
+    - Do you ever chat with Google Assistant?
+    - Do you ever chat with other bots?
+    - Do you ever talk to Alexa?
+    - Do you ever talk to Bixby?
+    - Do you know HAL?
+    - What can you tell me about Siri?
+    - Have you met Google Assistant?
+    - Have you met Google?
+    - Have you met Siri?
+    - Have you met the Google Assistant?
+    - What can you tell me about Alexa?
+    - What can you tell me about Bixby?
+    - What can you tell me about chatbots?
+    - What can you tell me about Cortana?
+    - Do you know Google Home?
+    - What can you tell me about other bots?
+    - Have you met Cortana?
+    - What do you know about Alexa?
+    - What do you know about Bixby?
+    - What do you know about chatbots?
+    - What do you know about Cortana?
+    - What do you know about Google Assistant?
+    - What other assistants do you know about?
+    - What other bots do you know about?
+    - What other bots do you know?
+    - What can you tell me about Google Assistant?
+    - Have you ever met Bixby?
+    - Do you know of Alexa?
+    - Do you know of Cortana?
+    - Do you know of Google?
+    - Do you know other bots?
+    - Do you know other chatbots?
+    - Do you know other digital agents?
+    - Do you know Siri?
+    - Have you met Eliza?
+    - Do you know Zo?
+    - Have you ever met Cortana?
+    - Have you ever met Eliza?
+    - Have you ever met Google Assistant?
+    - Have you ever met HAL?
+    - Have you ever met Siri?
+    - Have you ever met Zo?
+    - Have you met Bixby?
+    - What other chatbots do you know?
+    - Do you know the Google Assistant?
+
+- intent: fallback_asktechn
+  examples: |
+    - How do you feel about artificial intelligence?
+    - Are you interested in tech?
+    - What is your opinion about AI?
+    - How do you feel about tech?
+    - Are you interested in AI?
+    - How do you feel about the singularity?
+    - What is your opinion about tech?
+    - What should I know about AI?
+    - What is your opinion about bots?
+    - What should I know about tech?
+    - Are you a fan of tech?
+    - What do you think about technology?
+    - What do you think about AI?
+    - How do you feel about technology?
+    - How do you feel about bots?
+    - What is your opinion about tech companies?
+    - How do you feel about AI?
+    - Are you interested in technology?
+    - Are you interested in tech companies?
+    - Are you interested in bots?
+    - Are you interested in artificial intelligence?
+    - How do you feel about tech companies?
+    - What is your take on artificial intelligence?
+    - What should I know about tech companies?
+    - What should I know about bots?
+    - What should I know about artificial intelligence?
+    - What is your take on technology?
+    - What is your take on tech?
+    - What is your opinion about artificial intelligence?
+    - What is your take on bots?
+    - What should I know about technology?
+    - What is your take on AI?
+    - What is your opinion of tech?
+    - What is your opinion of tech companies?
+    - What is your opinion of artificial intelligence?
+    - What is your opinion of AI?
+    - What is your opinion about technology?
+    - What is your take on tech companies?

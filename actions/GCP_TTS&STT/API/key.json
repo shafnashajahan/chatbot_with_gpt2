@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "voice-tarot-bot",
+  "private_key_id": "9e5e5aad46c3fb8582e9765ac886df67faec0118",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCe4XamMhH58T4o\nHq5oD1tkYMuC5og0duWD3R9xsJ76gE2hLHhx2ARNN3vxUOHmKHd0ut1xsUPlhUfa\nsrJ6nQcijhFRUPKAqZpA8VwPPtqqSq0EVgS4p4DoEUVQWWt7uHluPdWJde09Ubck\nxoVjU7lBTe3aPf6Q33QZjop6T7cgCwG4cwLYzXLrbGbMYFbWJoEd8MLehC/nYF51\nGYu+LkfCyRbvj5m07iGlkN16eRAaNCS4MfDMklNIZY39fsoO5VixVYszk6aYnr27\nKLsVMwFb4Xn2PrmtGMx5pOEDgJD17KVtwu4TLvD2gGCSogs6LBScW+wNNXdLhzmy\nIifVoBXZAgMBAAECggEAFdXox5iUDeTQ5RSqZZTOu7Ht5lSmnYdFreTDAI4Em2rs\nwFzrRMIqfS5F83lpQoeHO1y/OHPjX/T8Vhs/GkjghSg/Swyz92jX0VsaiuHZjZPr\nyW/FAFfNCJfvDcbsVbmZvsPyyAyUCVxkrkI2bNtB167NJLRmeySqwSRs9bhk85s3\n7XA0GXg9WNOC8gMVmfBypIPUBxQJCCml3EEyczkkxjRHukYGC4jC2mvieXo8JEzF\n8lDuEcWEi8e2FJhiZ+9OePspsmBBi7XuXkJ9M56aIutKMJTYvRs7N19QOz40JbPy\njzp2wMjLZU1nDAZhpzPr1XJx69/MbcDtlGGIl21JHQKBgQDfRG7Aft9vHyNgyTKR\nfqXLqzuA9vJio1jGNF9tegFritGe1PdpheNzhxEqo/b4/eB/IpTxVNwTFnE1JbQl\nhkq+GMfDdzBV55NX/Rtd5Vd+XKI9BWC56OJDrWaLSUW6FRcrqqD5JUpB/KJyma15\nGu7cXW36QIIlIfl/d2XfBc38ywKBgQC2LICXdQGwNL3J+DT5A1B86sdurCL64MJx\nSeCcR21LMq23EnHAjapJ+2eZckycOcZS7gKgD/QlRU2DCpj13ohm6no01Xx4oDu9\n2KGSydOskGqM9BPvgp14jTAMuRvnnyWtDz87d2nWSAi5Q+vasjHZiDkGn8XQtheJ\ntCcKHP2nawKBgQDJ3p4k/pIXbxgV0tUeKFzQIirTGHVgKkGCNKhz2/ScwA94hSaP\nCrf1JRKoc0hDKYlqamIxMoEp4QjK/SQ9KYc7CjzUx1e01IWs8PVlmI/bePZYJhym\n+6JZftdQ6RdagOdKXCTgII9byok3BSyMa4W9Sdy+gMUrveRRFCvP0vfEsQKBgQCT\nWBU96z5NVas3w1CdI6gjEQXzJrk4Lzg1xyorXL4ydy/4BawJsMtOAVB+1OrP5Q7a\nnnVzHtQ6nP4fgh/LpYyvqPDk8NM3AWqwl5m/jwxs43W6weOp8fwJuDBn6gR+58Li\nYZWkNGZfEW404pHOFhipuDtfdzTZJZ6OGy8ESASFNwKBgQDMpjRwZy75Sgls2bA2\nEOJ1OKb51CZawLZkA634Gj6ZtWBK8/hEZYL4v5qEE5w/jxaA6HF8nH7LA6W6r8vR\nlCoKHnoRf6BxjcgwunwJElB+ckeGpiYgNP8H9mjmW1MI4+DAmoCb2j+Kz/K4+1BJ\n8eoBL7wB7tW3rpE4CyQZeR+UNw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "tarotservice@voice-tarot-bot.iam.gserviceaccount.com",
+  "client_id": "105248165595237944524",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/tarotservice%40voice-tarot-bot.iam.gserviceaccount.com"
+}

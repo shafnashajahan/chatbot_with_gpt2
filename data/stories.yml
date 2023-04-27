@@ -1,0 +1,172 @@
+version: "3.1"
+
+stories:
+
+- story: starting bot
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_herefor
+  
+- story: bot_asking1
+  steps: 
+  - action: utter_herefor
+  - intent: herefor
+  - action: utter_ask_relation
+  - intent: bot_ask_relatn  
+  - action: utter_ask_happy_relation
+  
+- story: bot_asking2 
+  steps:  
+  - action: utter_ask_happy_relation  
+  - intent: deny     
+  - action: utter_ask_unhappy_relation  
+  - intent: bot_ask_unhappy 
+  - action: action_ask_question 
+  
+- story: bot_asking3 
+  steps:  
+  - action: utter_ask_happy_relation  
+  - intent: affirm  
+  - action: action_ask_question 
+  
+- story: relationship_advise
+  steps:  
+  - action: action_ask_question 
+  - intent: relationship_advise 
+  - action: action_show_tarot
+  
+- story: card_selection
+  steps:   
+  - action: action_show_tarot
+  - intent: inform_tarot 
+  - action: action_pickup_tarot
+  - action: action_text_generation
+  
+- story: further_question_yes
+  steps:   
+  - action: action_text_generation
+  - intent: deny
+  - action: utter_thanks
+  - or:
+    - intent: affirm
+  - action: action_ask_question 
+  
+  
+# - story: user type query
+#   steps:
+#   - action: action_show_tarot
+#   - intent: inform_tarot  
+  
+# # - story: bot ask questions_relatonship
+# #   steps:  
+# #   - action: utter_ask_happy_relation  
+# #   - intent: bot_ask_happy  
+# #   - action: utter_ask_unhappy_relation  
+# #   - intent: bot_ask_unhappy 
+# #   - action: utter_card_pickup
+  
+# # - story: card_selector
+# #   steps:
+# #   - action: utter_card_pickup
+# #   - intent: card_pickup
+# #   - action: action_show_tarot
+  
+# # - story: user type query
+# #   steps:
+# #   - action: action_show_tarot
+# #   - intent: inform_tarot
+# #   - action: utter_ask_question
+
+# - story: show card info
+#   steps:
+#   - intent: show_tarot_cards
+#   - action: action_show_tarot
+
+# # - story: select tarot card
+# #   steps:
+# #   - intent: pickup
+# #   - action: action_show_tarot
+# #   - intent: inform_tarot
+# #   - action: action_pickup_tarot
+
+# - story: hint
+#   steps:
+#   - intent: hint
+#   - action: utter_hint
+
+# - story: help
+#   steps:
+#   - intent: help
+#   - action: utter_help
+ 
+
+
+# # - story: fallback
+# #   steps:
+# #   - intent: nlu_fallback
+# #   - action: utter_fallback
+
+# - story: fallback  
+#   steps:
+#   - or:
+#     - intent: out_of_scope
+#     - intent: nlu_fallback
+#   - action: utter_default
+#   - action: utter_herefor
+
+# - story: fallback_body
+#   steps:
+#   - intent: fallback_body
+#   - action:  utter_ask_fallback_body
+  
+# - story: fallback_boring
+#   steps:
+#   - intent: fallback_boring
+#   - action: utter_ask_fallback_boring
+  
+# - story: fallback_age
+#   steps:
+#   - intent: fallback_age
+#   - action: utter_ask_fallback_age
+  
+# - story: fallback_askme
+#   steps:
+#   - intent: fallback_askme
+#   - action: utter_ask_fallback_askme
+  
+# - story: fallback_play
+#   steps:
+#   - intent: fallback_play
+#   - action: utter_ask_fallback_play
+  
+# - story: fallback_whocreator 
+#   steps:
+#   - intent: fallback_whocreator 
+#   - action: utter_ask_fallback_whocreator 
+  
+# - story: fallback_askbotgender
+#   steps:
+#   - intent: fallback_askbotgender
+#   - action: utter_ask_fallback_askbotgender
+  
+# - story: fallback_askhappy
+#   steps:
+#   - intent: fallback_askhappy
+#   - action: utter_ask_fallback_askhappy
+  
+# - story: fallback_ask
+#   steps:
+#   - intent: fallback_ask
+#   - action: utter_ask_fallback_ask
+  
+# - story: fallback_askotherbot
+#   steps:
+#   - intent: fallback_askotherbot
+#   - action: utter_ask_fallback_askotherbot
+  
+# - story: fallback_asktechn
+#   steps:
+#   - intent: fallback_asktechn
+#   - action: utter_ask_fallback_asktechn 
+  

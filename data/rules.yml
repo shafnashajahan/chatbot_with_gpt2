@@ -1,0 +1,37 @@
+version: "3.1"
+
+rules:
+
+# - rule: Triggers for Intent
+#   steps:
+#   - intent: love_breakUp
+#   - action: action_use_tarot
+
+- rule: Say hi to the users with multiple action
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_herefor
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+ 
+# - rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+#   steps:
+#   - intent: nlu_fallback
+#   - action: utter_default 
+  
+- rule: out of scope
+  steps:
+  - or:
+    - intent: nlu_fallback
+    - intent: out_of_scope
+  - action: utter_default
+  - action: utter_herefor
